@@ -14,16 +14,20 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    //被打开软件需要增加URL TYPES
+    
+    
+    //本APP需要在plist文件里 增加LSApplicationQueriesSchemes 数组类型  增加元素为要打开APP 设置的url schemes
+    //然后在代码里 写
+//    [[UIApplication sharedApplication]openURL:<#(nonnull NSURL *)#> options:<#(nonnull NSDictionary<NSString *,id> *)#> completionHandler:<#^(BOOL success)completion#>];
+    
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
