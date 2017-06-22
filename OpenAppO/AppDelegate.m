@@ -1,20 +1,14 @@
 //
 //  AppDelegate.m
-//  OpenApp
+//  OpenAppO
 //
-//  Created by 安宁 on 2017/5/11.
+//  Created by 安宁 on 2017/6/22.
 //  Copyright © 2017年 安宁. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
-
-@property ( nonatomic , retain ) UIScrollView * sv ;
-
-@property ( nonatomic , retain ) UILabel * label ;
-
 
 @end
 
@@ -23,42 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[UIViewController alloc]init];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
-    _sv = [[UIScrollView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    _sv.contentSize = CGSizeMake(CGRectGetWidth([[UIScreen mainScreen] bounds]), 1000*2) ;
-    [self.window addSubview:_sv];
-    
-    _label  = [[UILabel alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    _label.numberOfLines = 0 ;
-    _label.backgroundColor = [UIColor whiteColor];
-    [_sv addSubview:_label];
-    
-    _label.text = [NSString stringWithFormat:@"%@\n::::: \n\ndidFinishLaunchingWithOptions : %@ \n %@ \n1121=======\n",_label.text,application,launchOptions];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
--(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
-{
-    _label.text = [NSString stringWithFormat:@"%@\n000000000:\nopenURL:(NSURL *)url options : \n %@\n%@\n%@ \n8898=======\n",_label.text,app,url,options];
 
-    return YES ;
-}
-
--(BOOL)application:(UIApplication *)application handleOpenURL:(nonnull NSURL *)url
-{
-    _label.text = [NSString stringWithFormat:@"%@\n99999999:\n%@\n999888",_label.text,url];
-
-    return YES ;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application
-{
+- (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
