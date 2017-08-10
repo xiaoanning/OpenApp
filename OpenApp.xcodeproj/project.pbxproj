@@ -447,6 +447,7 @@
 				4D7048BC1EFB5FB700F91B17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DB3093C1EC474A900D8FE54 /* Build configuration list for PBXProject "OpenApp" */ = {
 			isa = XCConfigurationList;
